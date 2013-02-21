@@ -1,2 +1,6 @@
 *~
 *.pyc
+
+# Aptana project files
+.project
+.pydevproject

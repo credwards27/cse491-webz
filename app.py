@@ -15,6 +15,7 @@ Visit:
 <a href='error'>an error</a>,
 <a href='helmet'>an image</a>,
 <a href='somethingelse'>something else</a>
+<h1>GARFUNKEL</h1>
 """
         elif path == '/content':
             content_type = 'text/html'
@@ -32,7 +33,7 @@ Visit:
         
         headers = [('Content-type', content_type)]
         start_response(status, headers)
-
+        
         return [data]
 
 if __name__ == '__main__':
