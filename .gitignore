@@ -1,6 +1,9 @@
 *~
 *.pyc
 
+# Mac-specific files
+.DS_Store
+
 # Aptana project files
 .project
 .pydevproject

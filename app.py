@@ -17,7 +17,6 @@ Visit:
 <a href='helmet'>an image</a>,
 <a href='somethingelse'>something else</a>
 <h1>GARFUNKEL</h1>
-=======
 <a href='somethingelse'>something else</a>, or
 <a href='form'>a form...</a>
 <p>
@@ -38,6 +37,7 @@ Visit:
             data = form()
         elif path == '/recv':
             formdata = environ['QUERY_STRING']
+            print formdata
             results = urlparse.parse_qs(formdata)
 
             firstname = results['firstname'][0]
@@ -65,7 +65,8 @@ Your last name? <input type='text' name='lastname' size='20'>
 
 if __name__ == '__main__':
     import random, socket
-    port = random.randint(8000, 9999)
+    #port = random.randint(8000, 9999)
+    port = 8181
     
     app = SimpleApp()
     
