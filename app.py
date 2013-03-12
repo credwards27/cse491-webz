@@ -21,6 +21,9 @@ Visit:
 <a href='form'>a form...</a>
 <p>
 <img src='/helmet'>
+</p>
+
+<p><a href='/html/'>Click here</a> to go to the linkz files</p>
 """
         elif path == '/content':
             content_type = 'text/html'
@@ -45,6 +48,19 @@ Visit:
 
             content_type = 'text/html'
             data = "First name: %s; last name: %s.  <a href='./'>return to index</a>" % (firstname, lastname)
+        
+        # html subdirectory
+        elif path == '/html/' or path == '/html/index.html':
+            content_type = 'text/html'
+            data = open('html/index.html').read()
+        elif path == '/html/link.html':
+            content_type = 'text/html'
+            data = open('html/link.html').read()
+        elif path == '/html/subdir/table.html':
+            content_type = 'text/html'
+            data = open('html/subdir/table.html').read()
+        
+        # unexpected request
         else:
             content_type = 'text/plain'
             data = "Hello, world; got path request %s" % environ['PATH_INFO']

@@ -22,6 +22,9 @@ print >>fp, "Hello, world.<p><a href='link.html'>this is a relative link</a>"
 print >>fp, """
 <p>
 <a href='subdir/table.html'>Here is a link</a> to a file in subdir/:
+</p>
+
+<a href="/" title="Go back to the parent index">Parent Index</a>
 """
 
 fp.close()
